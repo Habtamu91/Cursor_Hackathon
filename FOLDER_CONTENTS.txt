@@ -1,0 +1,458 @@
+BizPredict - Complete Folder Contents
+=====================================
+
+Generated: November 1, 2025
+
+ROOT DIRECTORY
+==============
+├── .gitignore                      - Git ignore patterns
+├── generate_data.bat               - Generate sales data (Windows)
+├── GETTING_STARTED.md              - Quick start guide
+├── PROJECT_SUMMARY.md              - Complete project overview
+├── QUICK_REFERENCE.md              - Quick reference card
+├── README.md                       - Main documentation
+├── requirements.txt                - Python dependencies
+├── run_api.bat                     - Start API server (Windows)
+├── run_dashboard.bat               - Start dashboard (Windows)
+├── run_forecast.bat                - Run forecasting (Windows)
+├── run_insights.bat                - Generate insights (Windows)
+└── setup.py                        - Setup automation script
+
+BACKEND (API Server)
+====================
+backend/
+├── app.py                          - FastAPI application with endpoints
+├── model.py                        - Forecasting service layer
+└── requirements.txt                - Backend-specific dependencies
+
+DASHBOARD (Web Interface)
+==========================
+dashboard/
+├── app.py                          - Streamlit interactive dashboard
+└── requirements.txt                - Dashboard-specific dependencies
+
+DATA DIRECTORY
+==============
+data/
+├── raw/
+│   └── ethiopia_sales_raw.csv      - Generated sales data (22,234 records)
+├── processed/
+│   └── cleaned_sales.csv           - Cleaned sales data
+└── forecasts/
+    └── forecast_results.csv        - 90-day forecast predictions
+
+NOTEBOOKS (Jupyter Analysis)
+=============================
+notebooks/
+├── 01_data_generation.ipynb        - Data generation walkthrough
+├── 02_data_cleaning_exploration.ipynb - EDA and cleaning
+├── 03_forecasting_model.ipynb      - Model training and evaluation
+└── 04_visualization_and_insights.ipynb - Visualizations and insights
+
+REPORTS (Generated Outputs)
+============================
+reports/
+├── insights.csv                    - Business insights (8 insights)
+└── presentation_slides.pptx        - Presentation template
+
+SOURCE CODE (Python Modules)
+=============================
+src/
+├── data_generator.py               - Synthetic data generation
+├── forecasting_model.py            - Prophet forecasting model
+└── insight_engine.py               - Business insights engine
+
+
+FILE DESCRIPTIONS
+=================
+
+Core Python Modules
+-------------------
+src/data_generator.py (200+ lines)
+  - EthiopiaSalesDataGenerator class
+  - Generates realistic sales data with:
+    * 8 Ethiopian regions
+    * 10 product categories
+    * 5 customer segments
+    * Seasonal patterns
+    * Holiday effects
+    * Growth trends
+  - Main function to generate and save data
+
+src/forecasting_model.py (250+ lines)
+  - SalesForecaster class
+  - CategoryForecaster class
+  - Uses Facebook Prophet for forecasting
+  - Features:
+    * Model training
+    * Performance evaluation (MAE, RMSE, MAPE, R²)
+    * Future predictions
+    * Confidence intervals
+  - Supports category-specific forecasts
+
+src/insight_engine.py (300+ lines)
+  - InsightEngine class
+  - Analyzes:
+    * Growth trends
+    * Seasonality patterns
+    * Product performance
+    * Regional variations
+    * Customer segments
+    * Forecast predictions
+  - Generates actionable recommendations
+  - Exports insights to CSV
+
+Backend API
+-----------
+backend/app.py (200+ lines)
+  - FastAPI application
+  - Endpoints:
+    * GET / - Welcome
+    * GET /health - Health check
+    * GET /api/stats - Sales statistics
+    * POST /api/forecast - Generate forecasts
+    * GET /api/insights - Business insights
+    * GET /api/products - Product analysis
+    * GET /api/regions - Regional breakdown
+    * GET /api/trends - Sales trends
+    * GET /api/categories - Product list
+    * GET /api/historical - Historical data
+  - CORS enabled
+  - Auto-documentation
+
+backend/model.py (200+ lines)
+  - ForecastingService class
+  - Service layer for:
+    * Data loading
+    * Model training
+    * Forecast generation
+    * Statistics calculation
+    * Trend analysis
+  - Supports filtered forecasts
+
+Dashboard
+---------
+dashboard/app.py (500+ lines)
+  - Streamlit web application
+  - 5 main pages:
+    1. Overview - Key metrics and trends
+    2. Forecasting - Interactive predictions
+    3. Insights - Business recommendations
+    4. Analysis - Detailed breakdowns
+    5. Regional View - Geographic performance
+  - Interactive filters
+  - Multiple visualizations:
+    * Line charts
+    * Bar charts
+    * Pie charts
+    * Heatmaps
+  - Real-time data updates
+
+Batch Scripts
+-------------
+generate_data.bat
+  - Runs data generator
+  - Uses Anaconda Python path
+
+run_forecast.bat
+  - Trains model
+  - Generates forecasts
+
+run_insights.bat
+  - Generates business insights
+  - Exports to CSV
+
+run_dashboard.bat
+  - Starts Streamlit dashboard
+  - Opens in browser
+
+run_api.bat
+  - Starts FastAPI server
+  - Serves REST API
+
+Jupyter Notebooks
+-----------------
+All notebooks include:
+  - Markdown documentation
+  - Python code cells
+  - Visualizations
+  - Analysis steps
+
+01_data_generation.ipynb
+  - Import libraries
+  - Initialize generator
+  - Generate data
+  - Summary statistics
+  - Visualizations
+  - Save data
+
+02_data_cleaning_exploration.ipynb
+  - Load raw data
+  - Data quality checks
+  - Clean and preprocess
+  - Exploratory analysis
+  - Pattern identification
+  - Save cleaned data
+
+03_forecasting_model.ipynb
+  - Load data
+  - Train Prophet model
+  - Evaluate performance
+  - Generate forecasts
+  - Visualize predictions
+  - Export results
+
+04_visualization_and_insights.ipynb
+  - Interactive visualizations
+  - Business insights
+  - Trend analysis
+  - Recommendations
+  - Report generation
+
+Documentation
+-------------
+README.md
+  - Project overview
+  - Features
+  - Installation instructions
+  - Quick start guide
+  - Usage examples
+  - API documentation
+  - Dataset description
+  - Model performance
+  - Contributing guidelines
+
+GETTING_STARTED.md
+  - Quick start steps
+  - Key insights summary
+  - Launch options
+  - Project structure
+  - Common tasks
+  - Customization guide
+  - Troubleshooting
+  - Next steps
+
+PROJECT_SUMMARY.md
+  - Complete project overview
+  - What has been created
+  - File structure with status
+  - Features implemented
+  - Current data state
+  - Technical stack
+  - Model performance
+  - Learning outcomes
+  - Future enhancements
+
+QUICK_REFERENCE.md
+  - Command quick reference
+  - File locations
+  - Data statistics
+  - Ethiopian context
+  - Top performers
+  - API endpoints
+  - Code snippets
+  - Configuration examples
+  - Troubleshooting table
+
+Configuration Files
+-------------------
+requirements.txt (Root)
+  - pandas==2.1.3
+  - numpy==1.26.2
+  - prophet==1.1.5
+  - scikit-learn==1.3.2
+  - matplotlib==3.8.2
+  - seaborn==0.13.0
+  - plotly==5.18.0
+  - fastapi==0.104.1
+  - uvicorn==0.24.0
+  - streamlit==1.28.2
+  - jupyter==1.0.0
+  + other dependencies
+
+backend/requirements.txt
+  - FastAPI and related packages
+  - Prophet for forecasting
+  - Data processing libraries
+
+dashboard/requirements.txt
+  - Streamlit
+  - Plotly for visualizations
+  - Prophet for forecasting
+
+.gitignore
+  - Python cache files
+  - Virtual environments
+  - Data files (except structure)
+  - Jupyter checkpoints
+  - IDE files
+  - OS files
+  - Logs and temp files
+
+setup.py
+  - Automated setup script
+  - Dependency installation
+  - Directory creation
+  - Data generation
+  - Interactive menu
+
+
+DATA CONTENTS
+=============
+
+ethiopia_sales_raw.csv (22,234 records)
+----------------------------------------
+Columns:
+  - transaction_id: Unique transaction ID
+  - date: Transaction date (2020-01-01 to 2024-10-31)
+  - region: Ethiopian region
+  - product_category: Product type
+  - customer_segment: Customer type
+  - quantity: Items sold
+  - unit_price: Price per unit (ETB)
+  - total_sales: Total transaction value (ETB)
+  - currency: ETB (Ethiopian Birr)
+
+Statistics:
+  - Total Sales: ETB 267,122,560.23
+  - Avg Transaction: ETB 12,014.15
+  - Date Range: 1,766 days
+  - Regions: 8
+  - Products: 10
+  - Segments: 5
+
+forecast_results.csv (1,768 records)
+-------------------------------------
+Columns:
+  - ds: Date
+  - trend: Trend component
+  - yhat: Predicted value
+  - yhat_lower: Lower confidence bound
+  - yhat_upper: Upper confidence bound
+  - weekly: Weekly seasonality
+  - yearly: Yearly seasonality
+  - monthly: Monthly seasonality
+  + additional components
+
+Forecast Summary:
+  - Period: 90 days
+  - Total: ETB 14,328,223.41
+  - Avg Daily: ETB 159,202.48
+  - Trend: Increasing
+
+insights.csv (8 insights)
+--------------------------
+Columns:
+  - category: Insight category
+  - severity: positive/warning/info
+  - title: Insight title
+  - description: Detailed finding
+  - recommendation: Action to take
+
+Categories:
+  - Seasonality (2 insights)
+  - Products (2 insights)
+  - Geography (2 insights)
+  - Customers (1 insight)
+  - Forecast (1 insight)
+
+
+PROJECT STATISTICS
+==================
+
+Code Statistics:
+  - Python files: 6
+  - Jupyter notebooks: 4
+  - Batch scripts: 5
+  - Config files: 4
+  - Documentation files: 5
+  - Total lines of code: ~3,000+
+
+Data Statistics:
+  - Sales records: 22,234
+  - Forecast points: 1,768
+  - Insights generated: 8
+  - Date range: 1,766 days
+  - Total sales value: ETB 267M+
+
+Features:
+  - API endpoints: 10
+  - Dashboard pages: 5
+  - Notebook sections: 20+
+  - Visualizations: 30+
+  - Insight categories: 6
+
+
+USAGE PATTERNS
+==============
+
+Common Workflows:
+-----------------
+
+1. Initial Setup
+   - Install dependencies
+   - Generate data
+   - Train model
+   - Generate insights
+
+2. Analysis
+   - Open Jupyter notebooks
+   - Explore data
+   - Run analysis cells
+   - Generate reports
+
+3. Interactive Use
+   - Launch dashboard
+   - Filter data
+   - Generate forecasts
+   - View insights
+
+4. API Integration
+   - Start API server
+   - Make HTTP requests
+   - Integrate with apps
+   - Export data
+
+5. Regeneration
+   - Modify parameters
+   - Regenerate data
+   - Retrain models
+   - Update forecasts
+
+
+TECHNICAL DETAILS
+=================
+
+Programming Language: Python 3.9+
+Web Frameworks: FastAPI, Streamlit
+ML Framework: Facebook Prophet
+Data Processing: pandas, numpy
+Visualization: matplotlib, seaborn, plotly
+Development: Jupyter, Git
+
+Architecture:
+  - Modular design
+  - Service layer pattern
+  - RESTful API
+  - MVC for dashboard
+  - Separation of concerns
+
+Code Quality:
+  - Docstrings for all functions
+  - Type hints where applicable
+  - Error handling
+  - Logging
+  - Comments for complex logic
+
+
+END OF FOLDER CONTENTS
+=======================
+
+This file provides a complete overview of the BizPredict project structure,
+file descriptions, and usage patterns.
+
+For quick start, see: GETTING_STARTED.md
+For detailed overview, see: PROJECT_SUMMARY.md
+For quick reference, see: QUICK_REFERENCE.md
+For general info, see: README.md
+
